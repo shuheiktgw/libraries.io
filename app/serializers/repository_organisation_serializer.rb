@@ -1,4 +1,6 @@
-class RepositoryOrganisationSerializer < ActiveModel::Serializer
+class RepositoryOrganisationSerializer
+  include FastJsonapi::ObjectSerializer
+
   attributes :github_id, :login, :user_type, :created_at, :updated_at, :name,
              :company, :blog, :location, :hidden, :last_synced_at, :email, :bio,
              :followers, :following, :uuid, :host_type
